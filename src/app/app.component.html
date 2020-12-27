@@ -1,0 +1,8 @@
+<app-middleware-graph>
+  <app-node *ngFor="let node of nodes" [initialPosition]="node.position" [nodeId]="node.id">
+    {{ node.label }}
+</app-node>
+</app-middleware-graph>
+
+
+<button (click)="addNode()">add node</button>

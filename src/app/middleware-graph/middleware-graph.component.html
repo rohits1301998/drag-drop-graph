@@ -1,0 +1,8 @@
+<div class="middleware-container arg-Graph panel">
+  <div [id]="node?.nodeId" class="middleware-node arg-Graph_item" [style.top.px]="node?.initialPosition?.y" [style.left.px]="node?.initialPosition?.x" *ngFor="let node of nodes; trackBy: _nodesTrackBy">
+    <ng-template [ngTemplateOutlet]="node.nodeTemplate"></ng-template>
+    <span class="arg-Graph_connector-handler" [class.disabled]="isConnected(node.nodeId)"></span>
+    <span class="arg-Graph_delete-item"></span>
+  </div>
+</div>
+
